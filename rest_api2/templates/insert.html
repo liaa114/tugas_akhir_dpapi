@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <div>
+        <header>
+            <div class="container">
+                <div class="h">
+                    <h2>Rest</h2>
+                    <h2 class="jabar"><img src="{{ url_for('static', filename='images/pon.png') }}" width="50px" height="50px"> api</h2>
+                </div>
+            </div>
+        </header>
+        <!-- header -->
+        <section class="banner">
+            <ul class="sidebar">
+                <li class="side-item"><a href="{{ url_for('index') }}" class="nav-link">
+                    <i class="fas fa-house-user"></i>
+                    <span class="title">Home</span>
+                </a></li>
+                <li class="side-item"><a href="{{ url_for('data') }}" class="nav-link">
+                    <i class="fas fa-list"></i>
+                    <span class="title"> Daftar Mahasiswa</span>
+                </a></li>
+                <li class="side-item"><a href="{{ url_for('insert') }}" class="nav-link">
+                    <i class="fas fa-user-plus"></i>
+                    <span class="title">Tambah Data</span>
+                </a></li>
+                <li class="side-item"><a href="{{ url_for('edit') }}" class="nav-link">
+                    <i class="fas fa-pen"></i>
+                    <span class="title">Update & Delete</span>
+                </a></li>
+            </ul>
+        </section>
+    </div>
+    <div class="data-insert">
+        <form action="/insert" method="POST">
+
+            <label for="nim">NIM:</label>
+            <input type="text" id="nim" name="nim"><br>
+
+            <label for="index">Index:</label>
+            <input type="text" id="no" name="no"><br>
+
+            <label for="nama">Nama:</label>
+            <input type="text" id="nama" name="nama"><br>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email"><br>
+
+            <label for="alamat">Alamat:</label>
+            <input type="text" id="alamat" name="alamat"><br>
+
+            <input type="submit" value="Submit">
+        </form>
+    </div>
+<body>
+</html>

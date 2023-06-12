@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}{% endblock %}</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <div>
+        <header>
+            <div class="container">
+                <div class="h">
+                    <h2>Rest</h2>
+                    <h2 class="jabar"><img src="{{ url_for('static', filename='images/pon.png') }}" width="50px" height="50px"> api</h2>
+                </div>
+            </div>
+        </header>
+        <!-- header -->
+        <section class="banner">
+            <ul class="sidebar">
+                <li class="side-item"><a href="{{ url_for('home') }}" class="nav-link">
+                    <i class="fas fa-list"></i>
+                    <span class="title"> Daftar Mahasiswa</span>
+                </a></li>
+                <li class="side-item"><a href="{{ url_for('get_mhs') }}" class="nav-link">
+                    <i class="fas fa-user-plus"></i>
+                    <span class="title">Tambah Data</span>
+                </a></li>
+                <li class="side-item"><a href="#" class="nav-link">
+                    <i class="fa-solid fa-file-pen"></i>
+                    <span class="title">Edit Data</span>
+                </a></li>
+                <li class="side-item"><a href="#" class="nav-link">
+                    <i class="fas fa-trash"></i>
+                    <span class="title"> Hapus Data</span>
+                </a></li>
+            </ul>
+        </section>
+    </div>
+</body>
+</html>
